@@ -30,7 +30,7 @@ namespace video
 
 - `EDT_OPENGL`：基于opengl的渲染设备，大多数平台都可以用。
 
-- `EDT_COUNT`：没有渲染驱动，只是为了技术元素。
+- `EDT_COUNT`：没有渲染驱动，只是为了计数元素。
 
 
 基本数据类型
