@@ -19,10 +19,23 @@ int main(void)
 		return 1;
 	}
 
+	/**
+	 * IvideoDriver是Irrlicht引擎最重要的接口之一，它能够执行2D和3D图形功能的驱动程序接口，
+	 * 并且所有的渲染和纹理操作都是用这个接口完成。
+	 */
 	video::IVideoDriver *driver = device->getVideoDriver();
+	/**
+	 * ISceneManager（场景管理器）管理场景的节点、网格资源、摄像头、和其它的内容
+	 * 所有的场景节点只能在这里创建
+	 */
 	scene::ISceneManager * smgr = device->getSceneManager();
+	/**
+	 * 提供对2D用户界面环境的访问。
+	 */
 	gui::IGUIEnvironment *guienv = device->getGUIEnvironment();
-
+	/**
+	 * 添加静态文本
+	 */
 	guienv->addStaticText(L"hello irrlicht engine", core::rect<s32>(10, 10, 260, 22), true);
 	while (device->run())
 	{
